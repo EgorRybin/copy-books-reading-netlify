@@ -11,6 +11,7 @@ import {
 	getFinishedReading,
 } from '../redux/library/librarySelector';
 import TrainingList from 'components/TrainingList';
+import  MyGoals  from "../components/MyGoals/MyGoals";
 
 export const StatisticsPage = () => {
 	const currentlyReading = useSelector(getCurrentlyReading);
@@ -22,6 +23,7 @@ export const StatisticsPage = () => {
 				<WrapperGoalsTimer>
 					<BoxTimerTraining>
 					<TimerBlock />
+				<TimerBlock />
 				<TrainingList
 					books={[...finishedReading, ...currentlyReading]}
 					// startDate={startDate}
