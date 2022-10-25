@@ -8,7 +8,6 @@ import { ReactComponent as Home } from '../../ui/Header/image/home.svg';
 import { ReactComponent as Line } from '../../ui/Header/image/line.svg';
 import { logOut } from 'redux/auth/authOperation';
 import { getUserName, getAccessToken } from 'redux/auth/authSelector';
-// import { getCurrentlyReading } from '../../redux/library/librarySelector';
 import {
 	LogoutButton,
 	HeaderContainer,
