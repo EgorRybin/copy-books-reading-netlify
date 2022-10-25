@@ -11,3 +11,6 @@ align-items: flex-start;
 `;
 
 export default GoalTrainingBox;
+
+
+

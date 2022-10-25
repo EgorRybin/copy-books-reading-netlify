@@ -13,3 +13,4 @@ export { default as StatTableDate } from './StatTableDate.styled';
 export { default as StatTableTime } from './StatTableTime.styled';
 export { default as StatTableTextPage } from './StatTableTextPage.styled';
 export { default as StatTextResolt } from './StatTextResolt.styled';
+export { WrapperGoalsTimer, BoxTimerTraining } from './WrapperGoalsTimer.styled';
