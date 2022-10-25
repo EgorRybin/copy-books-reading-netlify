@@ -13,12 +13,15 @@ const ProgressContainer = styled.div`
 		flex-direction: row;
 		justify-content: space-between;
 		padding: 20px 52px 8px 28px;
+		margin-bottom: 40px;
 	}
 	@media screen and (min-width: 1280px) {
 		background-color: transparent;
 		flex-direction: column;
 		justify-content: center;
 		padding: 0;
+		position: absolute;
+		right: 0;
 	}
 `;
 

@@ -4,14 +4,13 @@ import LineChart from 'components/Chart/Chart';
 import MyGoals from 'components/MyGoals/MyGoals';
 import { Section, Container } from 'ui/BasicStyles';
 import { StatisticsContainerCommon } from 'ui/StatisticsPage';
-import {WrapperGoalsTimer, BoxTimerTraining} from 'ui/StatisticsPage';
+import { WrapperStatistics, WrapperGoalsTimer, BoxTimerTraining } from 'ui/StatisticsPage';
 import { useSelector } from 'react-redux';
 import {
 	getCurrentlyReading,
 	getFinishedReading,
 } from '../redux/library/librarySelector';
 import TrainingList from 'components/TrainingList';
-import  MyGoals  from "../components/MyGoals/MyGoals";
 
 export const StatisticsPage = () => {
 	const currentlyReading = useSelector(getCurrentlyReading);
@@ -20,19 +19,22 @@ export const StatisticsPage = () => {
 	return (
 		<Section>
 			<Container>
-				<WrapperGoalsTimer>
-					<BoxTimerTraining>
-					<TimerBlock />
-				<TimerBlock />
-				<TrainingList
-					books={[...finishedReading, ...currentlyReading]}
-					// startDate={startDate}
-					// endDate={endDate}
-					// booksDelete={hanleDelete}
-				/>
-					</BoxTimerTraining>
-				<MyGoals />
-				</WrapperGoalsTimer>
+				<WrapperStatistics>
+					<WrapperGoalsTimer>
+						<BoxTimerTraining>
+							<TimerBlock />
+						</BoxTimerTraining>
+						<MyGoals />
+									<TrainingList
+										style={{ position: 'absolute' }}
+										books={[...finishedReading, ...currentlyReading]}
+										// startDate={startDate}
+										// endDate={endDate}
+										// booksDelete={hanleDelete}
+									/>
+					</WrapperGoalsTimer>
+				</WrapperStatistics>
+
 				<LineChart />
 				<StatisticsContainerCommon>
 					<Statistics />
